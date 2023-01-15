@@ -1,0 +1,14 @@
+@font-face{
+    font-family: aldo_fuente;
+    src:url("aldo/Aldo\ PC.ttf")
+}
+#icon{
+    position: absolute;
+    left: 36px;
+    right: 37px;
+    font-size: 80px;
+    color: #0A3871;    
+   font-family: aldo_fuente;
+   margin-top: 84px;
+   margin-left: 30px;
+}
