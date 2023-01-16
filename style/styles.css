@@ -2,6 +2,9 @@
     font-family: aldo_fuente;
    src: url("../aldo/Aldo\ PC.ttf")
 }
+body{
+    background-color: #E5E5E5;
+}
 #icon{
     position: absolute;
     left: 36px;
@@ -75,4 +78,36 @@ p{
     width: 250px;
     
     color: #0A3871;
+}
+.rightFront{
+    position: absolute;
+    border-radius: 20px;
+    height: 600px;
+    width: 300px;
+    background-color: #ffffff;
+    margin-top: 90px;
+    margin-left: 900px;
+}
+#cartoonima{
+    position: absolute;
+    height: 300px;
+    width:100%;
+    margin-top: 30%;
+    
+}
+.titdere{
+    position: absolute;
+    font-family:"Inter";
+   text-align: center;
+   color:#343A40 ;
+   margin-top: 400px;
+}
+.padere{
+    size: 16px;
+    position: absolute;
+    margin-top: 480px;
+    font-family:"Inter";
+    text-align: center;
+    color:#495057 ;
+    margin-left: 50px;
 }
