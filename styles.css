@@ -33,12 +33,18 @@
 #textfor::placeholder{
     color: #0A3871;
 }
-#exclamationicon{
-   position: absolute;
-   width: 10px;
+
+.parr{   
+    position: absolute;
+     margin-top: 600px;
+     margin-left: 200px;
+    font-size: 10px;
+    color: #ffffff;
     height: 10px;
-    margin-top: 600px;
-    margin-left: 200px;
+    width: 10px;
+    background-color: #495057;
+    border-radius: 100%;
+    text-align: center;
 }
 p{
     position: absolute;
