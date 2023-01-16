@@ -1,6 +1,6 @@
 @font-face{
     font-family: aldo_fuente;
-    src:url("aldo/Aldo\ PC.ttf")
+   src: url("../aldo/Aldo\ PC.ttf")
 }
 #icon{
     position: absolute;
@@ -52,4 +52,27 @@ p{
      margin-left: 220px;
     font-size: 10px;
     color: #495057;
+}
+#encripting{
+    position: absolute;
+    margin-top: 620px;
+    margin-left: 200px;
+    border-radius: 20px;
+    border: 1px ;
+    background-color: #0A3871;
+    height: 50px;
+    width: 250px;
+    color: #ffffff;
+}
+#decripting{
+    position: absolute;
+    margin-top: 620px;
+    margin-left: 500px;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    background-color: #D8DFE8;
+    height: 50px;
+    width: 250px;
+    
+    color: #0A3871;
 }
