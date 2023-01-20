@@ -111,3 +111,14 @@ p{
     color:#495057 ;
     margin-left: 50px;
 }
+#desencriptext{
+    border-radius: 20px;
+    margin-top: 90px;
+    margin-left: 900px;
+    position: absolute;
+    height: 600px;
+    width: 300px;
+    text-align: center;
+    background-color: rgba(255, 255,255, 0.1);
+    font-size: 20px;
+}
