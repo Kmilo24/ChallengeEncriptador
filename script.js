@@ -16,6 +16,12 @@ const dictiDes = new Map([
     ['ufat', "u"]
   ]);
 
+  function habili(){
+    document.getElementById("desencriptext").style.backgroundColor="#ffffff"
+    /*document.getElementById("copiar").style.backgroundColor="#D8DFE8"
+    document.getElementById("copiar").style.border="1px solid #0A3871"
+    document.getElementById("copiar").style.color="rgba(10, 56, 113, 1.0)"*/
+  }
 
 function verivaliText(){
     var text=new String(document.getElementById('textfor').value);
@@ -45,8 +51,8 @@ function verivaliText(){
 function encripta(){
 
    if(verivaliText()){
-
-    document.getElementById("desencriptext").style.backgroundColor="#ffffff"
+    habili();
+    
     var newtext="";
     var text=new String(document.getElementById('textfor').value);
     for(i=0;i<text.length;i++){
@@ -66,7 +72,7 @@ function encripta(){
 function desencripta(){
     var contador=0;
     if(verivaliText()){
-        document.getElementById("desencriptext").style.backgroundColor="#ffffff"
+       habili();
        
         var text=new String(document.getElementById('textfor').value);
         var newtext=text;
@@ -83,4 +89,12 @@ function desencripta(){
     }
 
 
+}
+
+function copiar(){
+    let desencriptext=document.getElementById('desencriptext')
+    desencriptext.querySelectorAllct();
+    desencriptext.setSelectionRange(0, 99999);
+    document.execCommand('copy');
+   
 }

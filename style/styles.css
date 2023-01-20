@@ -122,3 +122,24 @@ p{
     background-color: rgba(255, 255,255, 0.1);
     font-size: 20px;
 }
+
+#copiar{
+    position: absolute;
+    margin-top: 620px;
+    margin-left: 925px;
+    border: none;
+    border-radius: 20px;
+    background-color:rgba(216, 223, 232, 0.0);
+    height: 50px;
+    width: 250px;
+    
+    color:rgba(10, 56, 113, 0.0);
+}
+
+
+@media screen and (max-width:480px){
+    body{
+        display: grid;
+    }
+
+}
