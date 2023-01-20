@@ -1,6 +1,7 @@
-function verivaliText(){
+
+function verivaliText(text){
     //var newtext="";
-    var text=new String(document.getElementById('textfor').value);
+   // var text=new String(document.getElementById('textfor').value);
     var con=0;
     for(i=0;i<text.length;i++){
 
@@ -15,8 +16,10 @@ function verivaliText(){
 
     if(document.getElementById('textfor').value.length<=0){
         alert("Caja de texto vacia");
+        stop;
     }else if(con>0){
-        alert("Caracteres no validos");    
+        alert("Caracteres no validos");
+        stop;
     }    else{
         document.getElementById("desencriptext").style.backgroundColor="#ffffff"
         //encripta(newtext, text);

@@ -1,81 +1,54 @@
-var dictionario= new Map();
-//var text=new String(document.getElementById('textfor').value);
-dictionario.set("e", "enter");
-dictionario.set("i","imes");
-dictionario.set("a","ai");
-dictionario.set("o","ober");
-dictionario.set("u","ufat");
+
+const dictionario = new Map([
+    ['e', "enter"],
+    ['i', "imes"],
+    ['a',    "ai"],
+    ['o', "ober"],
+    ['u', "ufat"]
+  ]);
+
+
+const dictiDes = new Map([
+    ['enter', "e"],
+    ['ime', "i"],
+    ['ai',    "a"],
+    ['ober', "o"],
+    ['ufat', "u"]
+  ]);
 
 
 function verivaliText(){
-    var newtext="";
     var text=new String(document.getElementById('textfor').value);
     var con=0;
     for(i=0;i<text.length;i++){
 
-         if(text.charCodeAt(i)>=97 && text.charCodeAt(i)<=122){
+         if(text.charCodeAt(i)>=97 && text.charCodeAt(i)<=122 ||text.charCodeAt(i) ==32){
             cont=0;
          }else{
                con+=1; 
                break;
          }
     }
-    console.log(con);
-
+    
     if(document.getElementById('textfor').value.length<=0){
         alert("Caja de texto vacia");
+        return false;
     }else if(con>0){
         alert("Caracteres no validos");    
+        return false;
     }    else{
-        document.getElementById("desencriptext").style.backgroundColor="#ffffff"
-        encripta(newtext, text);
-        
+        return true;
     }
 }
 
 
-function encripta(newtext, text){
-    //var text=new String(document.getElementById('textfor').value);
-    for(i=0;i<text.length;i++){
-        if(dictionario.has(text.charAt(i))){        
-          newtext+=dictionario.get(text.charAt(i));
-          
-        }else{
-            newtext+=text.charAt(i);
-            
-        }
-         
-    }
+function encripta(){
 
-    document.getElementById('desencriptext').innerHTML=newtext;
-}
+   if(verivaliText()){
 
-
-
-
-
-
-
-
-
-
-
-/*function change(){
+    document.getElementById("desencriptext").style.backgroundColor="#ffffff"
     var newtext="";
-
-    if(document.getElementById('textfor').value.length<=0){
-        alert("Escribe Algo");
-    }else{
-        document.getElementById("desencriptext").style.backgroundColor="#ffffff"
-        veriText(newtext);
-        
-    }
-
-}
-function veriText(newtext){
     var text=new String(document.getElementById('textfor').value);
-    
-    
     for(i=0;i<text.length;i++){
         if(dictionario.has(text.charAt(i))){        
           newtext+=dictionario.get(text.charAt(i));
@@ -83,22 +56,31 @@ function veriText(newtext){
         }else{
             newtext+=text.charAt(i);
             
-        }
-         
+        }     
+    }
+    document.getElementById('desencriptext').innerHTML=newtext;
+   }
+}
+
+
+function desencripta(){
+    var contador=0;
+    if(verivaliText()){
+        document.getElementById("desencriptext").style.backgroundColor="#ffffff"
+       
+        var text=new String(document.getElementById('textfor').value);
+        var newtext=text;
+
+
+        for (let i of dictiDes.keys()) {
+            if(newtext.includes(i)){
+                newtext=newtext.replaceAll(i,dictiDes.get(i));
+             }
+             
+          }
+        document.getElementById('desencriptext').innerHTML=newtext;
+
     }
 
-    document.getElementById('desencriptext').innerHTML=newtext;
-}
 
-function verifica(text){
-    var con=0;
-   for(i=0;i<text.length;i++){
-        if(text.charCodeAt(i)>=97 || text.charCodeAt(i)<=122){
-           cont=0;
-        }else{
-              con+=1; 
-        }
-   }
-   return con;
 }
-*/
